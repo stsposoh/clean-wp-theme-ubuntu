@@ -1,8 +1,8 @@
-Rename "dist/wp-theme" to your theme name and change theme name in "const THEMENAME = 'wp-theme'" if gulpfile.babel.js
+- Rename "dist/wp-theme" to your theme name and change theme name in "const THEMENAME = 'wp-theme'" if gulpfile.babel.js
 
-Set theme info in dist/wp-theme/style.css
+- Set theme info in dist/wp-theme/style.css
 
-Create at the root directory file "ftp-config.js" with FTP data:
+- Create at the root directory file "ftp-config.js" with FTP data:
   > *`module.exports = {`*
   > *`  host: '',`*
   > *`  user: '',`*
@@ -10,7 +10,7 @@ Create at the root directory file "ftp-config.js" with FTP data:
   > *`  FTPAddress: ''`*
   > *`};`*
 
-
+> install
   > *`$ npm i`*
 >
 for development:
