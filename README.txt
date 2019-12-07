@@ -18,4 +18,3 @@ for development:
 >
 for production:
   > *`$ npm run build`*
-
