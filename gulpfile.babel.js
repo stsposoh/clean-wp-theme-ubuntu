@@ -1,6 +1,8 @@
 'use strict';
 
-import {src, dest, lastRun, watch, series, parallel} from 'gulp';
+import { host, user, password, FTPAddress } from './ftp-config';
+
+import { src, dest, lastRun, watch, series, parallel } from 'gulp';
 import stylus from 'gulp-stylus';
 import nib from 'nib';
 import debug from 'gulp-debug';
@@ -21,11 +23,6 @@ import ftp from 'vinyl-ftp';
 
 const PRODUCTION = yargs.argv.prod;
 const THEMENAME = 'wp-theme';
-//FTP
-const host = 'ftp60.hostland.ru';
-const user = 'host1474862';
-const password = 'JNl60P41';
-const FTPAddress = '/polyfill.ru/htdocs/demomaria/wp-content/themes';
 
 export const stylesLibs = () => {
   return src('app/styl/libs.styl')
