@@ -1,0 +1,29 @@
+font-path = '/wp-content/themes/ig-show/fonts/'
+
+mx-font-face($name, $src, $weight = false, $style = false)
+    @font-face
+        font-family $name
+        src: url(font-path + $src + '/' + $name + '.woff') format("woff"), url(font-path + $src + '/' + $name + '.woff2') format("woff2");
+
+font-face ?= mx-font-face
+
+//font-face('name', 'src', weight, style)
+//font-face('RalewaySemiBold', 'RalewaySemiBold', 600, normal)
+
+
+normalize_list()
+    padding 0
+    margin 0
+    list-style-type none
+
+clear_display_inlines()
+    font-size 0
+    > *
+        vertical-align top
+        display inline-block
+        font-size inherit
+
+truncate_text()
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;

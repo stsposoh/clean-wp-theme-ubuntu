@@ -1,0 +1,38 @@
+{
+  "name": "indi-gem-show",
+  "version": "1.0.0",
+  "description": "gulp-template for wordpress. Used es6, stylus, gulp",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "author": "Posokhov Stas",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.6.2",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "nib": "^1.1.2",
+    "vinyl-ftp": "^0.6.1",
+    "yargs": "^14.2.0"
+  }
+}
