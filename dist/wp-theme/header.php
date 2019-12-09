@@ -86,5 +86,84 @@
 
 <body <?php body_class(); ?>>
   <header class="header">
+    <div class="header__top">
+      <div class="header__top-info">
+        <?php $company_phone = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('company_phone') : '';
+        if (!empty($company_phone)) : ?>
+        <a href="tel:<?php echo $company_phone ?>" class="icon-text">
+          <span class="icon-text__icon"><i class="fa fa-phone"></i></span>
+          <span class="icon-text__text"><?php echo $company_phone ?></span>
+        </a>
+        <?php endif ?>
+        <?php $company_mail = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('company_mail') : '';
+        if (!empty($company_mail)) : ?>
+        <a href="mailto:<?php echo $company_mail ?>" class="icon-text">
+          <span class="icon-text__icon"><i class="fa fa-envelope-o"></i></span>
+          <span class="icon-text__text"><?php echo $company_mail ?></span>
+        </a>
+        <?php endif ?>
+        <?php $schedule = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('schedule') : '';
+        if (!empty($schedule)) : ?>
+        <span class="icon-text">
+          <span class="icon-text__icon"><i class="fa fa-history"></i></span>
+          <span class="icon-text__text"><?php echo $schedule ?></span>
+        </span>
+        <?php endif ?>
+      </div>
+      <div class="header__top-soc">
+        <div class="social">
+          <?php $social = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('social') : ''; ?>
+          <?php foreach ($social as $key => $val) : ?>
+          <a href="<?php echo $val['social_link'] ?>" class="social__icon">
+            <i class="<?php echo $val['social_icon']['icon-class'] ?>"></i>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
 
+    <div class="header__main">
+      <div class="header__main-logo">
+        <img src="<?php echo $logo_img['url'] ?>" alt="">
+      </div>
+      <div class="header__main-info">
+        <div class="header__main-info-block">
+          <div class="icon-block">
+            <span class="icon-block__icon"><i class="fa fa-map-marker"></i></span>
+            <span class="icon-block__content">
+              <?php $company_address = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('company_address') : '';
+              if (!empty($company_address)) : ?>
+              <?php echo $company_address ?>
+              <?php endif ?>
+              <a href="#" class="link-style --bordered">Посмотреть на карте</a>
+            </span>
+          </div>
+        </div>
+        <div class="header__main-info-block">
+          <div class="icon-block">
+            <span class="icon-block__icon"><i class="fa fa-phone"></span>
+            <span class="icon-block__content">
+              <?php $company_phone = (function_exists('fw_get_db_settings_option')) ? fw_get_db_settings_option('company_phone') : '';
+              if (!empty($company_phone)) : ?>
+              <a href="tel:<?php echo $company_phone ?>"><?php echo $company_phone ?></a>
+              <?php endif ?>
+              Звонок по России бесплатный
+              Обратный звонок
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__nav">
+        <?php $args = array(
+          'theme_location' => 'top',
+          'container' => false,
+          'menu_class' => '',
+          'menu_id' => '',
+          'fallback_cb' => false
+        );
+        wp_nav_menu($args);
+        ?>
+      </div>
+    </div>
   </header>

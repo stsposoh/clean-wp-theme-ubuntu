@@ -8,10 +8,10 @@
 ?>
 <footer class="footer">
   <?php $args = array(
-    'theme_location' => 'top',
+    'theme_location' => 'bottom',
     'container' => false,
-    'menu_class' => 'menu__list',
-    'menu_id' => 'main-nav',
+    'menu_class' => '',
+    'menu_id' => '',
     'fallback_cb' => false
   );
   wp_nav_menu($args);

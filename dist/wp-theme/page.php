@@ -9,15 +9,17 @@
 get_header(); ?>
 
 <main>
-	<div class="<?php content_class_by_sidebar(); ?>">
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<!--				<h1>--><?php //the_title(); ?><!--</h1>-->
-				<?php the_content(); ?>
-			</article>
-		<?php endwhile; ?>
-	</div>
-	<?php get_sidebar(); ?>
+  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <? if (!is_front_page() && !is_home() ) { ?>
+    <h1><?the_title();?></h1>
+    <? }; ?>
+
+    <?php the_content(); ?>
+  </article>
+
+  <?php endwhile; ?>
 </main>
 
 <?php get_footer(); ?>

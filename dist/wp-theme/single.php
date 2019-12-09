@@ -6,7 +6,8 @@
  * @since 1.0.0
  */
 
-get_header('blog'); ?>
+get_header();
+?>
 
 <div class="single-post">
 

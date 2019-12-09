@@ -21,58 +21,61 @@ $options = array(
 						'label' => __('Body Color', 'unyson'),
 						'value' => '#fffff',
 					),
-					'preloader' => array(
+          'logo_img' => array(
+            'label' => __( 'Logo', 'unyson' ),
+            'desc'  => __( 'Upload a logo image', 'unyson' ),
+            'type'  => 'upload'
+          ),
+					'social' => array(
 						'type'          => 'addable-popup',
-						'label'         => __( 'Preloader', 'fw' ),
-						'popup-title'   => __( 'Add/Edit preloader photos', 'fw' ),
-						'desc'          => __( 'Add photo', 'fw' ),
-						'template'      => '<img class="img-prev-unyson" src="{{=tab_img["url"]}}">',
+						'label'         => __( 'Social', 'fw' ),
+						'popup-title'   => __( 'Add/Edit social', 'fw' ),
+						'desc'          => __( 'Добавить соц сети', 'fw' ),
+						//'template'      => '<img class="img-prev-unyson" src="{{=tab_img["url"]}}">',
+						//'template'      => '{{- demo_text }}',
+						'template'      => 'Соц сеть',
 						'popup-options' => array(
-							'tab_img' => array(
-								'type'  => 'upload',
-								'label' => __('Photo', 'fw')
-							)
+							'social_icon' => array(
+                'type'  => 'icon-v2',
+                'preview_size' => 'small',
+                'modal_size' => 'small',
+                'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+                'label' => __('Соц сети', 'unyson'),
+                'desc'  => __('', 'unyson'),
+                'help'  => __('', 'unyson'),
+              ),
+              'social_link' => array(
+                'label' => __( 'Ссылка на соц сеть', 'unyson' ),
+                'desc'  => __( '', 'fw' ),
+                'type'  => 'text',
+                'value' => '#'
+              )
 						)
 					),
-					'fb_address' => array(
-						'label' => __( 'Link to Facebook', 'unyson' ),
-						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
-						'value' => '#'
-					),
-					'instagram_address' => array(
-						'label' => __( 'Link to Instagram', 'unyson' ),
-						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
-						'value' => '#'
-					),
-					'youtube_address' => array(
-						'label' => __( 'Link to Youtube', 'unyson' ),
-						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
-						'value' => '#'
-					),
-
-					'company_name' => array(
-						'label' => __( 'Company name', 'unyson' ),
-						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
-						'value' => ''
-					),
-
 					'company_address' => array(
-						'label' => __( 'Company address', 'unyson' ),
+						'label' => __( 'Адрес', 'unyson' ),
 						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
+						'type'  => 'textarea',
 						'value' => ''
 					),
-
-					'e_mail' => array(
-						'label' => __( 'Email', 'unyson' ),
-						'desc'  => __( '', 'fw' ),
-						'type'  => 'text',
-						'value' => ''
-					)
+          'company_phone' => array(
+            'label' => __( 'Телефон', 'unyson' ),
+            'desc'  => __( '', 'fw' ),
+            'type'  => 'text',
+            'value' => ''
+          ),
+          'company_mail' => array(
+            'label' => __( 'Email', 'unyson' ),
+            'desc'  => __( '', 'fw' ),
+            'type'  => 'text',
+            'value' => ''
+          ),
+          'schedule' => array(
+            'label' => __( 'График работы', 'unyson' ),
+            'desc'  => __( '', 'fw' ),
+            'type'  => 'text',
+            'value' => ''
+          ),
 				)
 			),
 		)
